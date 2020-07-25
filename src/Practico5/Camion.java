@@ -49,9 +49,9 @@ public class Camion {
    }
 
     public String toString(){
-        return "Camion de color: "+ this.getColor()+ " con una chapa: "+this.getChapa()+ " le toca revisión: "+ leTocaRevision(añoCompra);
+        return "Camion de color: "+ this.getColor()+ " con una chapa: "+this.getChapa()+ " le toca revisión: "+ tieneRevision(añoCompra);
     }
-    public boolean leTocaRevision(int añoCompra){
+    public boolean tieneRevision(int añoCompra){
         if (añoCompra<2015){
             return true;
         }else{
