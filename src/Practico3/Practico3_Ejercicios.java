@@ -3,9 +3,14 @@ package Practico3;
 import java.util.Scanner;
 
 public class Practico3_Ejercicios {
+
+    public static double PI = 3.14;
+
     public static void main(String args []){
 
         Scanner input = new Scanner(System.in);
+
+
         //Parte 1
       /*  // 3 Método que reciba dos enteros y retorne la multiplicación de la misma.
         System.out.println("Ingrese un numero");
@@ -160,8 +165,7 @@ public class Practico3_Ejercicios {
     //9- Crear un método que permita reciba el radio de un círculo, y retorne
     // su area (radio^2)*PI (utilizar una variable estática para el valor de PI)
     public static double areaCirculo(int radio){
-        double pi = 3.14;
-        return Math.pow(radio,2)*pi;
+        return Math.pow(radio,2)*PI;
     }
 
     //12- Realizar un método llamado calcularIva, que calcule el IVA (22%) dado un número float
@@ -213,8 +217,9 @@ public class Practico3_Ejercicios {
     public static int valorAbsoluto(int n){
         if (n<0) {
             return n * (-1);
-        }else
+        }else{
             return n;
+        }
     }
 
 
