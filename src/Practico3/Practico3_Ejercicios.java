@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Practico3_Ejercicios {
 
-    public static double PI = 3.14;
+
 
     public static void main(String args []){
 
@@ -165,13 +165,13 @@ public class Practico3_Ejercicios {
     //9- Crear un método que permita reciba el radio de un círculo, y retorne
     // su area (radio^2)*PI (utilizar una variable estática para el valor de PI)
     public static double areaCirculo(int radio){
-        return Math.pow(radio,2)*PI;
+        return Math.pow(radio,2)*Constants.PI;
     }
 
     //12- Realizar un método llamado calcularIva, que calcule el IVA (22%) dado un número float
     // llamado sueldo, recibido por parámetro. Sugerencia: utilizar variables estáticas.
     public static float calcularIva(float sueldo){
-        return  (sueldo*22)/100;
+        return  (sueldo*Constants.Iva)/100;
     }
 
     // ***** Parte 2 ****
