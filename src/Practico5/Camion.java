@@ -11,20 +11,20 @@ public class Camion {
         this.color="azul";
         this.añoCompra=2016;
     }
-    public Camion(int chapa1){
+    public Camion(int otraChapa){
         this.color="Desconocido";
-        this.chapa=chapa1;
+        this.chapa=otraChapa;
         this.añoCompra=0;
     }
-    public Camion(int chapa1, String color1){
-        this.chapa=chapa1;
-        this.color=color1;
+    public Camion(int otraChapa, String otroColor){
+        this.chapa=otraChapa;
+        this.color=otroColor;
         this.añoCompra=0;
     }
-    public Camion(int chapa1, String color1,int añoCompra1){
-        this.chapa=chapa1;
-        this.color=color1;
-        this.añoCompra=añoCompra1;
+    public Camion(int otraChapa, String otroColor,int otroAñoCompra){
+        this.chapa=otraChapa;
+        this.color=otroColor;
+        this.añoCompra=otroAñoCompra;
     }
 
    public int getChapa(){
@@ -44,24 +44,37 @@ public class Camion {
    public int getAñoCompra(){
         return añoCompra;
    }
-   public void setAñoCompra(int añoCompra1){
-        this.añoCompra=añoCompra1;
+   public void setAñoCompra(int otroAñoCompra){
+        this.añoCompra=otroAñoCompra;
    }
 
-    public String toString(){
-        return "Camion de color: "+ this.getColor()+ " con una chapa: "+this.getChapa()+ " le toca revisión: "+ tieneRevision(añoCompra);
-    }
-    public boolean tieneRevision(int añoCompra){
-        if (añoCompra<2015){
+    public boolean letocaRevision(int añoCompra){
+        if (añoCompra < 2015){
             return true;
         }else{
             return false;
         }
     }
 
-    public boolean tieneMismoColor(Camion camion){
-      return this.getColor().equals(camion.getColor());
+    public String tieneRevisionCamion(int añoCompra){
+        String mensaje=null;
+        boolean tieneRevision=letocaRevision(añoCompra);
+        if (tieneRevision==true){
+            return mensaje = "El camión debe ir a revisión";
+        }else{
+            return mensaje = "El camión no debe ir a revisión";
+        }
     }
+
+    public boolean tieneMismoColor(Camion camion){
+        return this.getColor().equals(camion.getColor());
+    }
+
+    public String toString(){
+        return "Camion de color: "+ this.getColor()+ " Número de chapa: "+this.getChapa()+ " Revisión: "+ tieneRevisionCamion(añoCompra);
+    }
+
+
 
 
 

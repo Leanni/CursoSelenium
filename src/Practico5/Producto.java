@@ -5,72 +5,72 @@ public class Producto {
     private int codigo;
     private boolean importado;
     private String nroLote;
-    private static int nroProducto;
+    private static int NRO_PRODUCTO;
 
     public Producto(){
         this.nombre="Desconocido";
         this.codigo= 0;
         this.importado= false;
         this.nroLote = "Desconocido";
-        nroProducto++;
+        NRO_PRODUCTO++;
     }
-    public Producto(String nombre1, int codigo1, String nroLote){
-        this.nombre=nombre1;
-        this.codigo=codigo1;
+    public Producto(String unNombre, int unCodigo, String nroLote){
+        this.nombre=unNombre;
+        this.codigo=unCodigo;
         this.nroLote=nroLote;
-        nroProducto++;
+        NRO_PRODUCTO++;
     }
-    public Producto(String nombre1, int codigo1, boolean importado1,String nroLote){
-        this.nombre=nombre1;
-        this.codigo=codigo1;
-        this.importado=importado1;
+    public Producto(String unNombre, int unCodigo, boolean esImportado,String nroLote){
+        this.nombre=unNombre;
+        this.codigo=unCodigo;
+        this.importado=esImportado;
         this.nroLote=nroLote;
-        nroProducto++;
+        NRO_PRODUCTO++;
     }
     public String getNombre(){
         return nombre;
     }
-    public void setNombre(String nombre1){
-        this.nombre=nombre1;
+    public void setNombre(String unNombre){
+        this.nombre=unNombre;
     }
 
     public int getCodigo(){
         return codigo;
     }
-    public void setCodigo(int codigo1){
-        this.codigo=codigo1;
+    public void setCodigo(int unCodigo){
+        this.codigo=unCodigo;
     }
 
     public boolean isImportado(){
         return importado;
     }
-    public void setImportado(boolean importado1){
-        this.importado=importado1;
+    public void setImportado(boolean esImportado){
+        this.importado=esImportado;
     }
 
     public String getNroLote(){
         return nroLote;
     }
-    public void setNroLote(String nroLote1){
-        this.nroLote=nroLote1;
+    public void setNroLote(String unNroLote){
+        this.nroLote=unNroLote;
     }
 
     public int getNroProducto(){
-        return nroProducto;
+        return NRO_PRODUCTO;
     }
 
     public String esImportado(boolean importado){
-        String esimportado= " ";
+        String esImportado= " ";
         if (importado==true){
-          return esimportado= "Este producto es importado";
+          return esImportado= "Este producto es importado";
         }else{
-           return esimportado="Producto nacional";
+           return esImportado="Producto nacional";
         }
     }
 
     public String toString(){
 
-        return "Producto: "+ nombre + " Codigo: " + codigo + " Importado: " + esImportado(importado)+ " Nro lote: "+nroLote + " Nro producto: " + nroProducto;
+        return "Producto: "+ this.nombre + " Codigo: " + this.codigo + " Importado: " + esImportado(importado)+ " Nro lote: "+ this.nroLote + " Nro producto: " + NRO_PRODUCTO;
     }
 
 
